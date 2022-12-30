@@ -1,5 +1,6 @@
 
 import React, { useState, useRef } from 'react';
+import LoginButton from "./Enedis1";
 
 function MovingDiv() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -37,7 +38,7 @@ function MovingDiv() {
       }}
       onMouseDown={handleMouseDown}
     >
-      Move me by clicking and dragging!
+      Move me  <LoginButton />
     </div>
   );
 }
