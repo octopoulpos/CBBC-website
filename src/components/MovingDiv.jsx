@@ -29,16 +29,16 @@ function MovingDiv() {
   };
 
   return (
-    <div className='note'
+    <div className='enedis'
       ref={divRef}
       style={{
         position: 'absolute',
-        left: position.x +15,
-        top: position.y +180,
+        left: position.x +900,
+        top: position.y +50,
       }}
       onMouseDown={handleMouseDown}
     >
-      Move me  <LoginButton />
+      <h3>Move me</h3>  <LoginButton />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Footer from "./Footer";
 // import Note from "./Note";
 import MovingDiv from "./MovingDiv";
 import Card from "./Card";
+import Logo from "./Logo";
 import contacts from "../contacts";
 
 // import Callback from "./Enedis1";
@@ -32,14 +33,11 @@ function App() {
 
     return (
         <div>
-            <Header />
-
-            <div className="body-div">
-
+            <Header /> 
+            <Logo />
+            <div className="main">
                 {contacts.map(createCard)}
-
                 <MovingDiv />
-
                 <Footer />
             </div>
         </div>

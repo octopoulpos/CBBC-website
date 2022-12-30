@@ -33,10 +33,6 @@ const LoginButton = () => {
     window.location.replace(redirectUrl);
   };
 
-// lien pour tester connection avec api : 
-//https://gw.hml.api.enedis.fr/group/espace-particuliers/consentement-linky/oauth2/authorize?client_id=b99082ce-2a5a-4a52-95bb-6d1093983ccc&response_type=d3b594fc-3253-4ed6-b471-d709bb88b23c&redirect_uri=https://cb-bc.fr&user_type=both
-  /// ça semble marcher, manque mon site qui répond surement ...
-
   return (
     <Button color="primary" outline onClick={handleLogin}>
       Connection au portail ENEDIS
@@ -113,39 +109,3 @@ const LoginButton = () => {
 
 export default LoginButton;
 
-
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-
-// const API_URL = 'https://api.enedis.fr';
-// const API_KEY = 'd3b594fc-3253-4ed6-b471-d709bb88b23c';
-// const CLIENT_ID = 'PRM:11453290002823';
-
-// function AppEne() {
-//   const [data, setData] = useState(null);
-
-//   useEffect(() => {
-//     async function fetchData() {
-//       const response = await fetch(`${API_URL}/v1/data_connect/`, {
-//         headers: {
-//           'Authorization': `Bearer ${API_KEY}`,
-//           'X-Client-Id': CLIENT_ID
-//         }
-//       });
-//       const json = await response.json();
-//       setData(json);
-//     }
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <div>
-//       {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}
-//     </div>
-//   );
-// }
-
-// export default AppEne;
