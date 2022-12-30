@@ -7,21 +7,19 @@ import Footer from "./Footer";
 import MovingDiv from "./MovingDiv";
 import Card from "./Card";
 import contacts from "../contacts";
-import AppEne from "./Enedis1";
-
-
-console.log(AppEne);
+// import AppEne from "./Enedis1";
 
 
 function createCard(contact) {
     return (
-        <Card 
+        <Card
+            id={contact.id} // répétition car "key" est une variable spéciale pas réutilisable (card.jsx, pas possible props.key)
             key={contact.id}
             name={contact.name}
             img={contact.imgURL}
             tel={contact.phone}
             email={contact.email}
-            />
+        />
     );
 }
 
@@ -33,8 +31,8 @@ function App() {
         <div>
             <Header />
             <div className="body-div">
-
-{contacts.map(createCard)}
+                
+                {contacts.map(createCard)}
 
                 {/* <Card
                     name="Bob"

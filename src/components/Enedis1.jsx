@@ -26,8 +26,9 @@ const LoginButton = () => {
     window.location.replace(redirectUrl);
   };
 
-  /// ça semble marcher, manque mon site qui répond surement ...
+// lien pour tester connection avec api : 
 //https://gw.hml.api.enedis.fr/group/espace-particuliers/consentement-linky/oauth2/authorize?client_id=b99082ce-2a5a-4a52-95bb-6d1093983ccc&response_type=d3b594fc-3253-4ed6-b471-d709bb88b23c&redirect_uri=https://cb-bc.fr&user_type=both
+  /// ça semble marcher, manque mon site qui répond surement ...
 
   return (
     <button onClick={handleLogin}>
