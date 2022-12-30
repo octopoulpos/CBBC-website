@@ -6,23 +6,21 @@ import Footer from "./Footer";
 // import Note from "./Note";
 import MovingDiv from "./MovingDiv";
 import Card from "./Card";
-import Logo from "./Logo";
-import contacts from "../contacts";
+import cards from "../cards";
 
 // import Callback from "./Enedis1";
 
 
 
 
-function createCard(contact) {
+function createCard(cards) {
     return (
         <Card
-            id={contact.id} // répétition car "key" est une variable spéciale pas réutilisable (card.jsx, pas possible props.key)
-            key={contact.id}
-            name={contact.name}
-            img={contact.imgURL}
-            tel={contact.phone}
-            email={contact.email}
+            id={cards.id} // répétition car "key" est une variable spéciale pas réutilisable (card.jsx, pas possible props.key)
+            key={cards.id}
+            name={cards.name}
+            img={cards.imgURL}
+            description={cards.description}
         />
     );
 }
@@ -33,13 +31,17 @@ function App() {
 
     return (
         <div>
-            <Header /> 
-            <Logo />
+            <Header />
             <div className="main">
-                {contacts.map(createCard)}
+                {cards.map(createCard)}
                 <MovingDiv />
-                <Footer />
+
             </div>
+
+            <div className="main">
+                {cards.map(createCard)}
+            </div>
+            <Footer />
         </div>
     );
 

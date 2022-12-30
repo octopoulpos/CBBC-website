@@ -10,25 +10,30 @@ body {
 }
 
 .bottom {
-  margin-top: 120px;
+  margin-top: 150px;
+}
+
+.bottom p {
+  font-family: "Arvo", cursive;
+  font-weight: 600;
 }
 
 .card {
   border-radius: 15px;
-  padding: 25px 15px;
+  padding: 25px 12px;
   background-color: #0A2647;
-  margin: 50px 0 0 20px;
+  margin: 50px 0 0 70px;
   box-shadow: 0 2px 5px rgb(0, 0, 0);
-  min-width: 400px;
+  
   max-width: 450px;
 }
 
 .card img {
-  margin: 30px 20px 0 0;
+  margin: 50px 20px 0 0;
 }
 
 .circle-img {
-  border-radius: 50%;
+  border-radius: 40%;
   border: 7px solid #fff;
   width: 120px;
   height: 120px;
@@ -42,14 +47,73 @@ body {
   text-align: center;
 }
 
-header {
+footer {
+text-align: center;
+margin-top: 15px;
+}
+
+/* header {
   background-color: #0A2647;
-  border-bottom-right-radius: 40%;
-  margin-top: 2%;
   z-index: 1;
   padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  width: 70%;
+margin-top: 2%;
+
+} */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #0A2647;
+  font-size: 18px;
 }
+
+
+header a {
+  color: #C58940;
+  position: relative;
+  font-family: "Arvo", cursive;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #c0935c;
+}
+
+header a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid #c0935c;
+  transition: all 0.6s;
+  opacity: 0;
+}
+
+header a:hover:before {
+  width: 100%;
+  height: 3px;
+  opacity: 1;
+}
+
+header .menu {
+  display: flex;
+  align-items: center;
+}
+
+header .menu a {
+  margin-left: 20px;
+}
+
 
 header h1 {
   color: #C58940;
@@ -69,12 +133,16 @@ h3 {
   font-weight: 200;
 }
 
+.info {
+  margin: 7px 0;
+  color: #1a7e76;
+}
+
 .logo {
-  position: fixed;
-  margin-top: 30%;
-  margin-left: 78%;
-  width: 200px;
-  z-index: 1;
+  width: 180px;
+  margin-right: 2%;
+
+
 }
 
 .main {
@@ -82,23 +150,16 @@ h3 {
   flex-wrap: wrap;
 }
 
-
 .name {
-  font-size: 2em;
+  font-size: 1,5em;
   color: #fff;
-  display: flex;
-  flex: 1;
-  margin: 10% 20px 0;
-}
-
-.info {
-  margin: 7px 0;
-  color: #1a7e76;
+  flex: 10;
+  margin: 3%;
 }
 
 .top {
   border-radius: 25px 25px 0 0;
-  height: 100px;
+  height: 140px;
   width: 100%;
   background-color: #1A0000;
   position: absolute;

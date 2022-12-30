@@ -33,8 +33,8 @@ function MovingDiv() {
       ref={divRef}
       style={{
         position: 'absolute',
-        left: position.x +900,
-        top: position.y +50,
+        left: position.x +1000,
+        top: position.y +550,
       }}
       onMouseDown={handleMouseDown}
     >
