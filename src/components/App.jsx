@@ -4,6 +4,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 // import Note from "./Note";
+import Login from "./Login";
 import MovingDiv from "./MovingDiv";
 import Card from "./Card";
 import cards from "../cards";
@@ -11,6 +12,8 @@ import cards from "../cards";
 // import Callback from "./Enedis1";
 
 
+var isLoggedIn = true;
+var isRegistered = false;
 
 
 function createCard(cards) {
@@ -29,8 +32,16 @@ function createCard(cards) {
 
 function App() {
 
+
+
     return (
         <div>
+        {
+            isLoggedIn === true ? 
+            <Login isRegistered={isRegistered} /> : null
+            
+        }
+            
             <Header />
             <div className="main">
                 {cards.map(createCard)}
