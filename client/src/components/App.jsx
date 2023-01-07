@@ -12,8 +12,7 @@ import cards from "../cards";
 // import Callback from "./Enedis1";
 
 
-var isLoggedIn = true;
-var isRegistered = false;
+
 
 
 function createCard(cards) {
@@ -36,16 +35,10 @@ function App() {
 
     return (
         <div>
-        {
-            isLoggedIn === true ? 
-            <Login isRegistered={isRegistered} /> : null
-            
-        }
-            
+ 
             <Header />
             <div className="main">
                 {cards.map(createCard)}
-                <MovingDiv />
 
             </div>
 

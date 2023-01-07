@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'reactstrap';
 
 import axios from 'axios';
 
@@ -7,7 +6,7 @@ import axios from 'axios';
 // console.log(process.env.REACT_APP_API_ID)
 
 const CLIENT_ID = process.env.REACT_APP_API_ID;
-const DURATION = '7'; // duration is the duration of the consent that you want (1, 7, 15 or 30 days)
+// const DURATION = '7'; // duration is the duration of the consent that you want (1, 7, 15 or 30 days)
 const REDIRECT_URI = 'https://cb-bc.fr/cbbc-enedis';
 
 
@@ -15,15 +14,15 @@ const REDIRECT_URI = 'https://cb-bc.fr/cbbc-enedis';
 const LoginButton = () => {
   const handleLogin = () => {
     // Generate state parameter with random string
-    let state = (Math.random() + 1).toString(36).substring(7);
+    // let state = (Math.random() + 1).toString(36).substring(7);
 
-    // Add test client number (from 0 to 4) to the end of state (cf documentation)
-    const testClientId = 0; // Replace with the test client number you want to use
-    state = state + testClientId;
+    // // Add test client number (from 0 to 4) to the end of state (cf documentation)
+    // const testClientId = 0; // Replace with the test client number you want to use
+    // state = state + testClientId;
 
     // Redirect user to login page on Enedis
 
-    // code origine : (chatgpt?)
+    // code origine : (chatgpt+doc enedis?)
     //   const redirectUrl =
     //     'https://gw.hml.api.enedis.fr/group/espace-particuliers/consentement-linky/oauth2/authorize' +
     //     '?' +
@@ -45,9 +44,14 @@ const LoginButton = () => {
     window.location.replace(redirectUrl);
   };
   return (
-    <Button color="primary" outline onClick={handleLogin}>
-      Connection au portail ENEDIS
-    </Button>
+
+<img
+      src={require("../images/boutonEne-txtnoir.png")}
+      alt="Connection au portail Enedis"
+      onClick={handleLogin}
+      style={{ cursor: 'pointer', maxWidth: '250px' }}
+    />
+
   );
 };
 
