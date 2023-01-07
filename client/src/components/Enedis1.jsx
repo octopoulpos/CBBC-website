@@ -22,17 +22,28 @@ const LoginButton = () => {
     state = state + testClientId;
 
     // Redirect user to login page on Enedis
+
+    // code origine : (chatgpt?)
+    //   const redirectUrl =
+    //     'https://gw.hml.api.enedis.fr/group/espace-particuliers/consentement-linky/oauth2/authorize' +
+    //     '?' +
+    //     `client_id=${CLIENT_ID}` +
+    //     `&state=${state}` +
+    //     `&duration=${DURATION}` +
+    //     '&response_type=code' +
+    //     `&redirect_uri=${REDIRECT_URI}`;
+    //   window.location.replace(redirectUrl);
+    // };
+    // !!test!! bac à cable : 
     const redirectUrl =
-      'https://gw.hml.api.enedis.fr/group/espace-particuliers/consentement-linky/oauth2/authorize' +
+      'https://gw.hml.api.enedis.fr/v1/oauth2/authorize' +
       '?' +
       `client_id=${CLIENT_ID}` +
-      `&state=${state}` +
-      `&duration=${DURATION}` +
       '&response_type=code' +
-      `&redirect_uri=${REDIRECT_URI}`;
+      `&redirect_uri=${REDIRECT_URI}` +
+      `&user_type={both}`;
     window.location.replace(redirectUrl);
   };
-
   return (
     <Button color="primary" outline onClick={handleLogin}>
       Connection au portail ENEDIS
@@ -108,4 +119,4 @@ const AppEne = () => {
 
 
 export default LoginButton;
-export {LoginButton, AppEne}
+export { LoginButton, AppEne }

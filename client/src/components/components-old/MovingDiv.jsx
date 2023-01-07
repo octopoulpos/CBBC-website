@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from 'react';
-import LoginButton from "./Enedis1";
+import LoginButton from "../Enedis1";
 
 function MovingDiv() {
   const [position, setPosition] = useState({ x: 0, y: 0 });

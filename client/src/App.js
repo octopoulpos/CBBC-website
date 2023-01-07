@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import BoutonConnectEnedis from "./components/BoutonConnectEnedis";
+import Login from "./components/Login";
 
 class App extends Component {
 state = {
@@ -29,6 +31,8 @@ state = {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
+          <Login />
+          <BoutonConnectEnedis />
         </header>
         <p className="App-intro">{this.state.data}</p>
       </div>
